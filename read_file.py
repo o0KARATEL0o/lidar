@@ -94,7 +94,7 @@ async def signals_from_dir(
 
 if __name__ == "__main__":
     project_logger.configure(handlers=[{"sink": sys.stderr, "level": "ERROR"},
-                                       {"sink": 'file{time}.log', "level": "INFO"}
+                                       {"sink": 'logs/file{time}.log', "level": "INFO"}
                                        ])
-    dir = Path('/home/vooloodiy/Documents/2024.01.22_Delft/')
-    asyncio.run(signals_from_dir(dir.joinpath('result.csv'), dir))
+    dir = Path('C:/Users/KARATEL/Desktop/lidar/100k_1h/')
+    asyncio.run(signals_from_dir('result.csv', dir))
